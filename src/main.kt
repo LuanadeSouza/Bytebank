@@ -2,6 +2,9 @@ fun main() {
 
     for (i in 5 downTo 1 step 2) {
 
+        if ( i == 4){
+            break
+        }
         val titular: String = "Luana $i"
         val numeroConta: Int = 1000 + i
         var saldo = i + 10.0
