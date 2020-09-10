@@ -5,19 +5,60 @@ fun main() {
     contaAlex.titular = "Alex"
     contaAlex.numero = 1000
     contaAlex.saldo = 200.0
-//    println(contaAlex.titular)
-//    println(contaAlex.numero)
-//    println(contaAlex.saldo)
+    println(contaAlex.titular)
+    println(contaAlex.numero)
+    println(contaAlex.saldo)
 
 
     val contaFran = Conta()
     contaFran.titular = "Fran"
     contaFran.numero = 1001
     contaFran.saldo = 300.0
-//    println(contaFran.titular)
-//    println(contaFran.numero)
-//    println(contaFran.saldo)
+    println(contaFran.titular)
+    println(contaFran.numero)
+    println(contaFran.saldo)
 
+    println("Depositando na conta do Alex")
+    contaAlex.deposita(50.0)
+    println(contaAlex.saldo)
+
+    println("Depositando na conta da Fran")
+    contaFran.deposita(70.0)
+    println(contaFran.saldo)
+
+    println("Sacando na conta do Alex")
+    contaAlex.saca(250.0)
+    println(contaAlex.saldo)
+
+    println("Sacando na conta da Fran")
+    contaFran.saca(350.0)
+    println(contaFran.saldo)
+
+    println("Saque em excesso na conta da Fran")
+    contaFran.saca(500.0)
+    println(contaFran.saldo)
+
+
+}
+
+class Conta {
+    var titular = ""
+    var numero = 0
+    var saldo = 0.0
+
+    fun deposita(valor: Double) {
+        this.saldo += valor
+    }
+
+    fun saca(valor: Double) {
+        if (saldo >= valor) {
+            saldo -= valor
+        }
+    }
+
+}
+
+fun testaCopiasEReferencias() {
     val numeroX = 10
     var numeroY = numeroX
     numeroY++
@@ -27,7 +68,7 @@ fun main() {
 
     val contaJoao = Conta()
     contaJoao.titular = "João"
-    var contaMaria = Conta()
+    val contaMaria = Conta()
     contaMaria.titular = "Maria"
     contaJoao.titular = "João"
 
@@ -36,13 +77,6 @@ fun main() {
 
     println(contaJoao)
     println(contaMaria)
-}
-
-class Conta {
-    var titular = ""
-    var numero = 0
-    var saldo = 0.0
-
 }
 
 fun testaLacos() {
@@ -60,9 +94,9 @@ fun testaLacos() {
         i++
     }
     for (i in 5 downTo 1 step 2) {
-        val titular: String = "Luana $i"
+        val titular = "Luana $i"
         val numeroConta: Int = 1000 + i
-        var saldo = i + 10.0
+        val saldo = i + 10.0
 
         println("Titular $titular")
         println("Número da conta:  $numeroConta")
