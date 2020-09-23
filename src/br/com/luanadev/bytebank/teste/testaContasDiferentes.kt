@@ -16,7 +16,7 @@ fun testaContasDiferentes() {
         numero = 1001
     )
 
-    println("titular")
+    println("titular${contaCorrente.titular}")
     println("nome do titular ${contaCorrente.titular.nome}")
     println("cpf do titular ${contaCorrente.titular.cpf}")
 
