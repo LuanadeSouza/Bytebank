@@ -1,6 +1,6 @@
-package funcionario
+package br.com.luanadev.bytebank.modelo.funcionario
 
-class Analista(
+class Auxiliar(
     nome: String,
     cpf: String,
     salario: Double
@@ -11,6 +11,6 @@ class Analista(
 ) {
     override val bonificacao: Double
         get() {
-            return salario * 0.10
+            return salario * 0.05
         }
 }

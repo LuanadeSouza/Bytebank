@@ -1,4 +1,4 @@
-package conta
+package br.com.luanadev.bytebank.modelo.conta
 
 class ContaPoupanca(
     titular: String,

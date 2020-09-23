@@ -1,4 +1,4 @@
-package funcionario
+package br.com.luanadev.bytebank.modelo.funcionario
 
 class CalculadoraBonificacao {
 
@@ -7,10 +7,10 @@ class CalculadoraBonificacao {
         println("nome ${funcionario.nome}")
         this.total += funcionario.bonificacao
     }
-//    fun registra(gerente: funcionario.Gerente) {
+//    fun registra(gerente: br.com.luanadev.bytebank.modelo.funcionario.Gerente) {
 //        this.total += gerente.bonificacao
 //    }
-//    fun registra(diretor: funcionario.Diretor) {
+//    fun registra(diretor: br.com.luanadev.bytebank.modelo.funcionario.Diretor) {
 //        this.total += diretor.bonificacao
 //    }
 

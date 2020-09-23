@@ -1,9 +1,9 @@
-package teste
+package br.com.luanadev.bytebank.teste
 
-import funcionario.Analista
-import funcionario.CalculadoraBonificacao
-import funcionario.Diretor
-import funcionario.Gerente
+import br.com.luanadev.bytebank.modelo.funcionario.Analista
+import br.com.luanadev.bytebank.modelo.funcionario.CalculadoraBonificacao
+import br.com.luanadev.bytebank.modelo.funcionario.Diretor
+import br.com.luanadev.bytebank.modelo.funcionario.Gerente
 
 fun testaFuncionarios() {
     val alex = Analista(

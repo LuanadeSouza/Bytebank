@@ -1,4 +1,4 @@
-package funcionario
+package br.com.luanadev.bytebank.modelo.funcionario
 
 abstract class FuncionarioAdmin(
     nome: String,

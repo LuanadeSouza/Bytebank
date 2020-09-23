@@ -1,9 +1,9 @@
-package teste
+package br.com.luanadev.bytebank.teste
 
-import cliente.Cliente
-import funcionario.Diretor
-import funcionario.Gerente
-import funcionario.SistemaInterno
+import br.com.luanadev.bytebank.modelo.cliente.Cliente
+import br.com.luanadev.bytebank.modelo.funcionario.Diretor
+import br.com.luanadev.bytebank.modelo.funcionario.Gerente
+import br.com.luanadev.bytebank.modelo.funcionario.SistemaInterno
 
 fun testaAutenticacao() {
     val gerente = Gerente(

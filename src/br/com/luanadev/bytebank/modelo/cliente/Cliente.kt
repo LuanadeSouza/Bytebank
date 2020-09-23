@@ -1,6 +1,6 @@
-package cliente
+package br.com.luanadev.bytebank.modelo.cliente
 
-import funcionario.Autenticavel
+import br.com.luanadev.bytebank.modelo.funcionario.Autenticavel
 
 class Cliente(
     val nome: String,

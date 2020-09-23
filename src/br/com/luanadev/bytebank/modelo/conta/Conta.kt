@@ -1,4 +1,4 @@
-package conta
+package br.com.luanadev.bytebank.modelo.conta
 
 abstract class Conta(
     var titular: String,

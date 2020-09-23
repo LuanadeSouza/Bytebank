@@ -1,7 +1,7 @@
-package teste
+package br.com.luanadev.bytebank.teste
 
-import conta.ContaCorrente
-import conta.ContaPoupanca
+import br.com.luanadev.bytebank.modelo.conta.ContaCorrente
+import br.com.luanadev.bytebank.modelo.conta.ContaPoupanca
 
 fun testaComportamentosConta() {
     val contaAlex = ContaCorrente(titular = "Alex", numero = 1000)
