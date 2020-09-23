@@ -1,7 +1,9 @@
 package br.com.luanadev.bytebank.modelo.conta
 
+import br.com.luanadev.bytebank.modelo.cliente.Cliente
+
 class ContaPoupanca(
-    titular: String,
+    titular: Cliente,
     numero: Int
 ) : Conta(
     titular = titular,

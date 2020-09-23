@@ -1,7 +1,9 @@
 package br.com.luanadev.bytebank.modelo.conta
 
+import br.com.luanadev.bytebank.modelo.cliente.Cliente
+
 abstract class Conta(
-    var titular: String,
+    var titular: Cliente,
     val numero: Int
 ) {
     var saldo = 0.0

@@ -1,18 +1,21 @@
 package br.com.luanadev.bytebank.teste
 
+import br.com.luanadev.bytebank.modelo.cliente.Cliente
 import br.com.luanadev.bytebank.modelo.conta.ContaCorrente
 import br.com.luanadev.bytebank.modelo.conta.ContaPoupanca
 
 fun testaComportamentosConta() {
-    val contaAlex = ContaCorrente(titular = "Alex", numero = 1000)
+
+    val alex = Cliente(nome = "Alex", cpf = "", senha = 1)
+    val contaAlex = ContaCorrente(titular = alex, numero = 1000)
     contaAlex.deposita(-200.0)
 
     println(contaAlex.titular)
     println(contaAlex.numero)
     println(contaAlex.saldo)
 
-
-    val contaFran = ContaPoupanca(numero = 1001, titular = "Fran")
+    val fran = Cliente(nome = "Fran", cpf = "", senha = 2)
+    val contaFran = ContaPoupanca(numero = 1001, titular = fran)
     contaFran.deposita(300.0)
 
     println(contaFran.titular)
