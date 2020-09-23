@@ -1,3 +1,8 @@
+package teste
+
+import conta.ContaCorrente
+import conta.ContaPoupanca
+
 fun testaCopiasEReferencias() {
     val numeroX = 10
     var numeroY = numeroX
@@ -6,9 +11,9 @@ fun testaCopiasEReferencias() {
     println("numeroX $numeroX")
     println("numeroY $numeroY")
 
-    val contaJoao = Conta("João", 1002)
+    val contaJoao = ContaCorrente("João", 1002)
     contaJoao.titular = "João"
-    val contaMaria = Conta("Maria", 1003)
+    val contaMaria = ContaPoupanca("Maria", 1003)
     contaMaria.titular = "Maria"
     contaJoao.titular = "João"
 
