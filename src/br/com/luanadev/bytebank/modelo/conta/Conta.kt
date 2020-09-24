@@ -9,13 +9,22 @@ abstract class Conta(
     var saldo = 0.0
         protected set
 
+    companion object {
+        var total = 0
+            private set
+    }
+
+    init {
+        total++
+    }
+
     fun deposita(valor: Double) {
         if (valor > 0) {
             this.saldo += valor
         }
     }
 
-   abstract fun saca(valor: Double)
+    abstract fun saca(valor: Double)
 
     fun transfere(valor: Double, destino: Conta): Boolean {
         if (saldo >= valor) {
