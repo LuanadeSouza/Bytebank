@@ -1,37 +1,16 @@
 package br.com.luanadev.bytebank
 
-import br.com.luanadev.bytebank.modelo.cliente.Cliente
-import br.com.luanadev.bytebank.modelo.conta.Conta
-import br.com.luanadev.bytebank.modelo.conta.ContaCorrente
-import br.com.luanadev.bytebank.modelo.conta.ContaPoupanca
-import br.com.luanadev.bytebank.modelo.funcionario.Autenticavel
-import br.com.luanadev.bytebank.modelo.funcionario.SistemaInterno
-import br.com.luanadev.bytebank.teste.testaContasDiferentes
+import br.com.luanadev.bytebank.teste.testaAutenticacaoTiposDiferentes
 
 fun main() {
 
-    val fran = object : Autenticavel {
-        val nome: String = "Fran"
-        val cpf: String = "111.111.111-11"
-        val senha: Int = 1000
-
-        override fun autentica(senha: Int) = this.senha == senha
-    }
-    val sistemaInterno = SistemaInterno()
-    sistemaInterno.entra(fran, 1000)
-    println("nome do cliente ${fran.nome}")
+    testaAutenticacaoTiposDiferentes()
 
 
-
-
-    val alex = Cliente(nome = "Alex", cpf = "", senha = 1)
-    val contaPoupanca = ContaPoupanca(titular = alex, numero = 1000)
-    val contaCorrente = ContaCorrente(titular = alex, numero = 1001)
-
-    testaContasDiferentes()
-
-    println("Total de contas: ${Conta.total}")
 }
+
+
+
 
 
 
