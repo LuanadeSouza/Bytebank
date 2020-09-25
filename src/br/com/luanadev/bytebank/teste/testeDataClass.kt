@@ -11,8 +11,18 @@ fun testaDataClass() {
         rg = "12345678-9",
         cpf = "123.456.789-01"
     )
+    val documento2: Documento = documento.copy()
+
     println(alex)
     println(documento)
+    println(documento == documento2)
+    println(documento2)
 
 }
-class Documento(val rg: String, val cpf: String)
+class Pessoa(var nome: String, val idade: Int) {
+
+    fun fala() {
+        println("emite som")
+    }
+}
+data class Documento(val rg: String, val cpf: String)
