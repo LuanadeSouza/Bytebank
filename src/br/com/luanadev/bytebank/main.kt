@@ -2,22 +2,42 @@ package br.com.luanadev.bytebank
 
 import br.com.luanadev.bytebank.modelo.cliente.Endereco
 import java.lang.ClassCastException
+import java.lang.NumberFormatException
 
 fun main() {
     println("início main")
-    try {
-        10 / 0
-    } catch (e: ArithmeticException) {
-        println("ArithmeticException foi pega")
+    val entrada: String = "1.0"
+    val valorRecebido: Double? = try {
+        entrada.toDouble()
+    } catch (e: NumberFormatException) {
+        println("Problemas na conversão")
+        e.printStackTrace()
+        null
     }
+
+    val valorComTaxa: Double? = if (valorRecebido != null){
+        valorRecebido + 0.1
+    }else{
+        null
+    }
+
+    if (valorComTaxa != null) {
+        println("valor recebido: $valorComTaxa")
+    } else {
+        println("valor invalido")
+    }
+
+
     funcao1()
     println("fim main")
 }
+
 fun funcao1() {
     println("início funcao1")
     try {
         funcao2()
     } catch (e: ClassCastException) {
+        e.printStackTrace()
         println("ClassCastException foi pega")
     }
     println("fim funcao1")
