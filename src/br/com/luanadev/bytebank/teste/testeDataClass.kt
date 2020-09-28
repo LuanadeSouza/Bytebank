@@ -22,7 +22,7 @@ fun testaDataClass() {
 class Pessoa(var nome: String, val idade: Int) {
 
     fun fala() {
-        println("emite som")
+        println("FALANDO")
     }
 }
 data class Documento(val rg: String, val cpf: String)
