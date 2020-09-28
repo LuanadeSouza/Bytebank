@@ -13,7 +13,6 @@ fun main() {
     funcao1()
     println("fim main")
 }
-
 fun funcao1() {
     println("início funcao1")
     try {
