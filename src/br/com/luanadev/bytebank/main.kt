@@ -2,13 +2,14 @@ package br.com.luanadev.bytebank
 
 import br.com.luanadev.bytebank.exception.SaldoInduficienteException
 import br.com.luanadev.bytebank.modelo.cliente.Endereco
+import br.com.luanadev.bytebank.teste.testaComportamentosConta
 import java.lang.ClassCastException
 import java.lang.Exception
 import java.lang.NumberFormatException
 
 fun main() {
     println("início main")
-    funcao1()
+    testaComportamentosConta()
     println("fim main")
 }
 fun funcao1() {

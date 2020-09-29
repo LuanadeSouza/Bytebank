@@ -1,6 +1,6 @@
 package br.com.luanadev.bytebank.teste
 
-fun main2() {
+fun testaPilhas() {
     println("início main")
     funcao1()
     println("fim main")
