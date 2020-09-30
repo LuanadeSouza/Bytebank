@@ -1,21 +1,29 @@
 package br.com.luanadev.collections
 
-fun testaIntAraayOf() {
-    val idades = intArrayOf(20, 19, 33, 20, 55, 40)
+fun testaIntArrayOf() {
 
-    var maiorIdade = Int.MIN_VALUE
-    for (idade in idades) {
-        if (idade > maiorIdade) {
-            maiorIdade = idade
-        }
-    }
-    println("Maior idade: ${maiorIdade}")
+    val idades = intArrayOf(10, 12, 18, 33, 40, 67)
+    val maiorIdade = idades.max()
+    println("Maior idade: $maiorIdade")
 
-    var menorIdade = Int.MAX_VALUE
-    idades.forEach { idade ->
-        if (idade < menorIdade) {
-            menorIdade = idade
-        }
-    }
-    println("Menor idade: ${menorIdade}")
+    val menorIdade = idades.min()
+    println("Menor idade: $menorIdade")
+
+    val mediaIdades = idades.average()
+    println("Média das idades: $mediaIdades")
+
+    val todosMaiores = idades.all {it >= 18}
+    println("Todos maiores? $todosMaiores")
+
+    val existeMaior = idades.any{it >= 18}
+    println("Algum aluno é maior de idade? $existeMaior")
+
+    val maiores = idades.filter {it >= 18}
+    println("Maiores: $maiores")
+
+    val busca = idades.find { it >= 18 }
+    println("Busca: $busca")
+
+
+
 }
