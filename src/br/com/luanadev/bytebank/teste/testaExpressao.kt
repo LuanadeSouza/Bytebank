@@ -10,6 +10,10 @@ fun testaExpressao() {
         println("Problemas na conversão")
         e.printStackTrace()
         null
+    }catch (e: Exception){
+        println("Erro desconhecido")
+        e.printStackTrace()
+        null
     }
 
     val valorComTaxa: Double? = when {

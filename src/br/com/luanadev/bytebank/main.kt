@@ -1,35 +1,23 @@
 package br.com.luanadev.bytebank
 
-import br.com.luanadev.bytebank.exception.SaldoInduficienteException
 import br.com.luanadev.bytebank.modelo.cliente.Endereco
-import br.com.luanadev.bytebank.teste.testaComportamentosConta
-import java.lang.ClassCastException
-import java.lang.Exception
-import java.lang.NumberFormatException
+import java.lang.IllegalArgumentException
 
 fun main() {
-    println("início main")
-    testaComportamentosConta()
-    println("fim main")
-}
-fun funcao1() {
-    println("início funcao1")
-    try {
-        funcao2()
-    } catch (e: SaldoInduficienteException) {
-        e.printStackTrace()
-        println("SaldoInduficienteException foi pega")
+    var enderecoNulo: Endereco? = Endereco(logradouro = "rua vergueito", complemento = "predio")
+    val logradouroNovo: String? = enderecoNulo?.logradouro
+    enderecoNulo?.let {
+        println(it.logradouro.length)
+        val tamanhoComplemento: Int = it.complemento?.length ?: throw IllegalArgumentException("Preencha o campo complemento!")
+        println(tamanhoComplemento)
     }
-    println("fim funcao1")
+    testes("")
+    testes(1)
 }
 
-fun funcao2() {
-    println("início funcao2")
-    for (i in 1..5) {
-        println(i)
-        throw SaldoInduficienteException()
-    }
-    println("fim funcao2")
+fun testes(valor: Any){
+    val numero: Int? = valor as? Int
+    println(numero)
 }
 
 
