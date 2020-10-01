@@ -1,4 +1,4 @@
-package br.com.luanadev.collections
+package br.com.luanadev.collections.array
 
 import java.math.BigDecimal
 import java.math.RoundingMode

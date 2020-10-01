@@ -1,4 +1,4 @@
-package br.com.luanadev.collections
+package br.com.luanadev.collections.array
 
 fun testaDoubleArrayOf() {
     val salarios = doubleArrayOf(1500.50, 2300.0, 5000.0, 8000.0, 10000.0)

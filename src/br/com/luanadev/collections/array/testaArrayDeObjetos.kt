@@ -1,4 +1,4 @@
-package br.com.luanadev.collections
+package br.com.luanadev.collections.array
 
 import java.math.BigDecimal
 import java.math.RoundingMode
@@ -10,7 +10,7 @@ fun testaArrayDeObjetos() {
 
     val aumento = "1.1".toBigDecimal()
     val salariosComAumento: Array<BigDecimal> = salarios
-        .map { salario -> calculaAumentoRelativo(salario, aumento)}
+        .map { salario -> calculaAumentoRelativo(salario, aumento) }
         .toTypedArray()
 
     println(salariosComAumento.contentToString())

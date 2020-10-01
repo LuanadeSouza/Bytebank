@@ -1,4 +1,4 @@
-package br.com.luanadev.collections
+package br.com.luanadev.collections.array
 
 fun testaRanger() {
     val serie = 1.rangeTo(10)
